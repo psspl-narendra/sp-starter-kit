@@ -1,0 +1,51 @@
+{
+  "name": "sp-starter-kit",
+  "version": "1.4.0",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "serve": "cross-env NODE_OPTIONS=--max_old_space_size=8192 gulp serve",
+    "build:dev": "gulp clean && cross-env NODE_OPTIONS=--max_old_space_size=8192 gulp bundle && gulp package-solution",
+    "build:prod": "gulp clean && cross-env NODE_OPTIONS=--max_old_space_size=8192 gulp bundle --ship && gulp package-solution --ship",
+    "bundle:dev": "cross-env NODE_OPTIONS=--max_old_space_size=8192 gulp bundle",
+    "bundle:prod": "cross-env NODE_OPTIONS=--max_old_space_size=8192 gulp bundle --ship",
+    "clean": "gulp clean",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "@microsoft/decorators": "1.8.0",
+    "@microsoft/sp-application-base": "1.8.0",
+    "@microsoft/sp-core-library": "1.8.0",
+    "@microsoft/sp-dialog": "1.8.0",
+    "@microsoft/sp-listview-extensibility": "1.8.0",
+    "@microsoft/sp-lodash-subset": "1.8.0",
+    "@microsoft/sp-office-ui-fabric-core": "1.8.0",
+    "@microsoft/sp-webpart-base": "1.8.0",
+    "@microsoft/teams-js": "^1.4.1",
+    "@pnp/common": "^1.0.4-4",
+    "@pnp/logging": "^1.0.4-4",
+    "@pnp/odata": "^1.0.4-4",
+    "@pnp/sp": "^1.0.4-4",
+    "@pnp/spfx-controls-react": "1.11.0",
+    "@pnp/spfx-property-controls": "1.13.1",
+    "@types/es6-promise": "0.0.33",
+    "@types/react": "16.4.2",
+    "@types/react-dom": "16.0.5",
+    "@types/webpack-env": "1.13.1",
+    "react": "16.3.2",
+    "react-dom": "16.3.2"
+  },
+  "devDependencies": {
+    "@microsoft/sp-build-web": "1.8.0",
+    "@microsoft/sp-module-interfaces": "1.8.0",
+    "@microsoft/sp-webpart-workbench": "1.8.0",
+    "@types/chai": "3.4.34",
+    "@types/mocha": "2.2.38",
+    "ajv": "~5.2.2",
+    "cross-env": "^5.2.0",
+    "gulp": "~3.9.1",
+    "tslint-microsoft-contrib": "5.0.0"
+  }
+}
